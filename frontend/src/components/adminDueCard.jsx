@@ -15,8 +15,8 @@ const DueCard = (props) => {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end",marginRight:'10px'}}>
-        <div style={{ fontSize: "1rem", color: "#787878", }}>Total</div>
-        <div style={{ fontSize: "1.1rem", fontWeight: "600", color: "#439F15",  marginBottom: "4px" }}>₹ {total}</div>
+        {/* <div style={{ fontSize: "1rem", color: "#787878", }}>Total</div>
+        <div style={{ fontSize: "1.1rem", fontWeight: "600", color: "#439F15",  marginBottom: "4px" }}>₹ {total}</div> */}
         <div style={{  fontSize: "1rem",  color: "#787878" }}>{pendingCnt} dues pending</div>
       </div>
 
