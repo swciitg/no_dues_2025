@@ -6,7 +6,6 @@ import { BoardData } from "./fakeData";
 const AdminDashboard = ()=>{
 
     const [path , setPath] = useState(['No Dues']);
-    const [searchKey , setSearchKey] = useState('');
     const [data, setData] = useState(BoardData);
 
     return (

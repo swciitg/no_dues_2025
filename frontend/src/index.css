@@ -18,10 +18,17 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #EEF1F4;
+  background-color: rgb(238, 241, 244);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+
+.glassmorphism{
+  background-color: rgba(134, 134, 134, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); 
 }

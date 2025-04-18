@@ -3,7 +3,9 @@ import HeaderTab from "./header";
 import SearchBar from "./searchbar";
 import FilterButton from "./filter";
 import DueCard from "./adminDueCard";
-import { BoardData , DeptData } from "../pages/centralAdmin/dashboard/fakeData";
+import { BoardData , DeptData, StudData } from "../pages/centralAdmin/dashboard/fakeData";
+import StudentCard from "./adminStudentCard";
+import AdminCSVUploader from "./adminUpload";
 
 
 const AdminDashboardTeamplate = (props)=>{
@@ -11,18 +13,29 @@ const AdminDashboardTeamplate = (props)=>{
     const [searchKey , setSearchKey] = useState('');
     const {data,path,setData,setPath} = props;
 
+    const mp = [
+        BoardData,
+        DeptData,
+        StudData
+    ] // this will be dynamic when data is sent from backend as this is fake data mapping for now
+
     function setDataForSections(item) {
-        setData(DeptData);
+        setData(mp[item.level]);
         setPath((path)=> [...path, item.title])
     }
 
-    function backTrack() {
-        setData(BoardData);
-        setPath(["No Dues"]);
+    function backTrack(index) {
+        setData(mp[index]);
+        setPath((path)=>path.slice(0,index+1));
     }
 
     return (
-        <div style={{display:'flex' , alignItems:'center', justifyContent:'center' , width:'100vw'}}>
+        <div style={{display:'flex', flexDirection:'column' , alignItems:'center', width:'100vw',marginTop:'16vh',gap:'20px'}}>
+
+            {
+                path.length==3 && 
+                <AdminCSVUploader/>
+            }
 
             <div className="dashboard-outer-card" style={{display:'flex', flexDirection:'column' , background:'#fff'}}>
 
@@ -37,7 +50,9 @@ const AdminDashboardTeamplate = (props)=>{
                 {
                  data.map((item,index) =>{
                     return(
-                        <span style={{cursor:'pointer'}} onClick={()=>{
+                       
+                        item.level<3? // note this for non-central admins 
+                        (<span key={index} style={{cursor:'pointer'}} onClick={()=>{
                             setDataForSections(item)
                         }}>
                         <DueCard title={item.title} 
@@ -45,7 +60,12 @@ const AdminDashboardTeamplate = (props)=>{
                         total={item.total} 
                         pendingCnt={item.pendingCnt} 
                         color={index%3==0?'#2364AA':(index%3==1?'#3DA5D9':'#73BFB8')} />
-                        </span>
+                        </span>):
+                        (<span key={index}>
+                            <StudentCard student={item}/>
+                        </span>)
+                       
+
                     )
                 })
                 }
