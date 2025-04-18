@@ -1,8 +1,8 @@
-import arrow from '../../../assets/arrow_forward.png'
+import arrow from '../assets/arrow_forward.png'
 
 const HeaderTab = (props)=> {
 
-    const {path} = props
+    const {path,backTrack} = props
 
     return(
         <>
@@ -11,7 +11,10 @@ const HeaderTab = (props)=> {
                 {
                     path.map((lvl, index) => {
                         return(
-                            <div style={{color:index!=path.length-1?'#7B7B7B':'#2A3F54',fontWeight:'500'}}>
+                            <div style={{color:index!=path.length-1?'#7B7B7B':'#2A3F54',fontWeight:'500',cursor:'pointer'}}
+                            onClick={()=>{
+                                if(index!=path.length-1) backTrack(index);
+                            }}>
                                 {index!=0?
                                 <>
                                 <img src={arrow} style={{width:'10px' , margin:'0px 10px'}}/>
