@@ -1,0 +1,30 @@
+{
+  "name": "nodues2025_backend",
+  "version": "1.0.0",
+  "description": "Backend Folder for No Dues Portal 2025",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swciitg/no_dues_2025.git"
+  },
+  "author": "Heet Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swciitg/no_dues_2025/issues"
+  },
+  "homepage": "https://github.com/swciitg/no_dues_2025#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
