@@ -1,6 +1,6 @@
 export const BoardData = [
     {
-        title:"Department Dues", approvedCnt:86, total:2056, pendingCnt:23, name:"dept",level:1
+        title:"Academic Dues", approvedCnt:86, total:2056, pendingCnt:23, name:"acd",level:1
     } , 
     {
         title:"Student Affairs Dues", approvedCnt:86, total:2056, pendingCnt:23, name:"sab",level:1
@@ -53,6 +53,32 @@ export const DeptData =[
     {
         title: "Data Science and Artificial Intelligence", approvedCnt: 86, total: 2056, pendingCnt: 23, name: "dsai", level:2
     }
+    ,
+    {
+        title: "Management", approvedCnt: 86, total: 2056, pendingCnt: 23, name: "dsai", level:2
+    }
+]
+
+export const HostelData = [
+    { title: "Kameng", approvedCnt: 86, total: 2056, pendingCnt: 23, name: "kameng", level: 2 },
+    { title: "Barak", approvedCnt: 74, total: 1872, pendingCnt: 15, name: "barak", level: 2 },
+    { title: "Umiam", approvedCnt: 90, total: 1930, pendingCnt: 20, name: "umiam", level: 2 },
+    { title: "Gaurang", approvedCnt: 80, total: 2022, pendingCnt: 22, name: "gaurang", level: 2 },
+    { title: "Dihing", approvedCnt: 78, total: 1984, pendingCnt: 18, name: "dihing", level: 2 },
+    { title: "Siang", approvedCnt: 88, total: 2100, pendingCnt: 24, name: "siang", level: 2 },
+    { title: "Manas", approvedCnt: 82, total: 1890, pendingCnt: 19, name: "manas", level: 2 },
+    { title: "Kapili", approvedCnt: 85, total: 2000, pendingCnt: 17, name: "kapili", level: 2 },
+    { title: "Brahmaputra", approvedCnt: 92, total: 2201, pendingCnt: 21, name: "brahmaputra", level: 2 },
+    { title: "Subansiri", approvedCnt: 84, total: 1995, pendingCnt: 16, name: "subansiri", level: 2 },
+    { title: "Disang", approvedCnt: 77, total: 1850, pendingCnt: 14, name: "disang", level: 2 },
+    { title: "Dhansiri", approvedCnt: 76, total: 1905, pendingCnt: 20, name: "dhansiri", level: 2 },
+    { title: "Lohit", approvedCnt: 89, total: 2080, pendingCnt: 23, name: "lohit", level: 2 },
+    { title: "Dikhow", approvedCnt: 83, total: 1950, pendingCnt: 18, name: "dikhow", level: 2 }
+]
+
+export const LibData = [
+    { title: "Central Library", approvedCnt: 102, total: 2345, pendingCnt: 28, name: "central_library", level: 2 }, 
+    { title: "Departmental Library", approvedCnt: 95, total: 2103, pendingCnt: 19, name: "departmental_library", level: 2 }
 ]
 
 export const StudData = [
@@ -81,4 +107,3 @@ export const StudData = [
         roll: "210101008", email: "student8@iitg.ac.in", name: "Nidhi Agarwal", dues: false, level: 3
     }
 ]
-
