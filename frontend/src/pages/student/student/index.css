@@ -1,0 +1,313 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    overflow: hidden;
+}
+.dues_status{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+.dues_title{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+.dues_count h1{
+    margin: 0%;
+    padding: 0%;
+}
+.dues_text h2{
+    margin: 0%;
+    margin: 0.5rem;
+    color: #000;
+    font-size: 1.08738rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1rem; 
+    letter-spacing: 0.174rem;
+}
+.allclear{
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.5rem;
+    background: #6995EC;
+    color: #FFFFFF;
+}
+.certificate{
+    display: flex;
+    padding: 2.25rem 2.1875rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    width: 80%;
+    gap: 1.25rem;
+    border-radius: 2rem;
+}
+.certificate_title p{
+    color: #1E2532;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.33331rem;
+}
+.certificate_button button{
+    display: flex;
+    padding: 1rem 1.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 0.75rem;
+    background: #2164E8;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    border:none;
+    color: #FFFFFF;
+}
+.dues_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem;
+}
+.card_container_active{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 80%;
+    margin-bottom: 1rem;
+
+}
+.card_container_active .card_index{
+    color: rgb(48, 46, 46);
+    font-weight: 100;
+    font-size: 14px;
+    width: 60px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+}
+.card_container_active .card_outer{
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 12px 16px;
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+.card_container_active .card_inner{
+    flex: 1;
+}
+.card_container_active .carddesign{
+    background-color: #2364AA;
+    width: 10px;
+    height: 100px;
+    padding: 1.5rem 0.5rem;
+
+}
+.card_container_active .card_details{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+}
+.card_container_active .container1{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-left: 3vmax;
+}
+.card_container_active .container1 .title h1{
+    text-align: left;
+    color: black;
+    font-size: 25px;
+    margin-bottom: 4px; 
+    font-weight: 600;
+}
+.card_container_active .container1 .location p{
+    font-size: 20px;
+    color: #888;
+}
+.card_container_active .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    margin-right: 70px;
+    padding-top: 1rem;
+  }
+  .card_container_active .container2 .status{
+    color: #439F15;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+
+  }
+  .card_container_active .container2 .status p{
+    margin: 0;
+    padding: 0;
+  }
+  .card_container_active .time {
+    font-size: 20px;
+    color: #9D9D9D;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.33331rem; 
+  }
+  
+  .card_container_active .carddesign {
+    width: 12px;
+    height: 100%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /*non active*/
+
+  .card_container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 80%;
+    margin-bottom: 1rem;
+
+}
+.card_container .card_index{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    width: 60px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c0c0c0;
+}
+.card_container .card_outer{
+    display: flex;
+    align-items: center;
+    background: #e2e2e2;
+    border-radius: 18px;
+    padding: 12px 16px;
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+.card_container .card_inner{
+    flex: 1;
+}
+.card_container .carddesign{
+    background-color: #6B7B99;
+    width: 10px;
+    height: 100px;
+    padding: 1.5rem 0.5rem;
+
+}
+.card_container .card_details{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+}
+.card_container .container1{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-left: 3vmax;
+}
+.card_container .container1 .title h1{
+    text-align: left;
+    color: #4a4a4a;
+    font-size: 25px;
+    margin-bottom: 4px; 
+    font-weight: 600;
+}
+.card_container .container1 .location p{
+    font-size: 20px;
+    color: #888;
+}
+.card_container .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    margin-right: 70px;
+    padding-top: 1rem;
+  }
+  .card_container .container2 .status{
+    color: white;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: #6B7B99;
+    font-weight: 500;
+
+  }
+  .card_container .container2 .status p{
+    margin: 0;
+    padding: 0;
+  }
+  .card_container .time {
+    font-size: 20px;
+    color: #9D9D9D;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.33331rem; 
+  }
+  
+  .card_container .carddesign {
+    width: 12px;
+    background-color: #5c6b8a;
+    height: 100%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  @media (max-width: 480px) {
+    .card_container_active, .card_container {
+        width: 95%;
+        margin-bottom: 1rem;
+    }
+    .card_details {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .container2 {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+    .card_outer{
+        padding: 8px 12px;
+    }
+  
+
+  }

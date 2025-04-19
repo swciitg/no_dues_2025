@@ -1,0 +1,42 @@
+<svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="43" height="43" fill="#1E1E1E"/>
+<g id="Student">
+<path d="M-3207 -549C-3207 -550.105 -3206.1 -551 -3205 -551H2870C2871.1 -551 2872 -550.105 2872 -549V883C2872 884.105 2871.1 885 2870 885H-3205C-3206.1 885 -3207 884.105 -3207 883V-549Z" fill="#1A4705" fill-opacity="0.41"/>
+<path d="M-3205 -550H2870V-552H-3205V-550ZM2871 -549V883H2873V-549H2871ZM2870 884H-3205V886H2870V884ZM-3206 883V-549H-3208V883H-3206ZM-3205 884C-3205.55 884 -3206 883.552 -3206 883H-3208C-3208 884.657 -3206.66 886 -3205 886V884ZM2871 883C2871 883.552 2870.55 884 2870 884V886C2871.66 886 2873 884.657 2873 883H2871ZM2870 -550C2870.55 -550 2871 -549.552 2871 -549H2873C2873 -550.657 2871.66 -552 2870 -552V-550ZM-3205 -552C-3206.66 -552 -3208 -550.657 -3208 -549H-3206C-3206 -549.552 -3205.55 -550 -3205 -550V-552Z" fill="white" fill-opacity="0.1"/>
+<g id="student side" clip-path="url(#clip0_0_1)">
+<rect width="1920" height="1080" transform="translate(-1145 -403)" fill="#EEF1F4"/>
+<g id="Frame 17335">
+<rect x="-821" y="-52" width="1166" height="146.217" rx="32" fill="white"/>
+<g id="Frame 17334">
+<g id="Button">
+<g id="_Button base" filter="url(#filter0_d_0_1)">
+<rect x="-27.2168" y="-16" width="337.217" height="74.2166" rx="12" fill="#2164E8"/>
+<g id="file_save">
+<mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="43" height="43">
+<rect id="Bounding box" x="0.783203" width="42.2166" height="42.2166" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_1)">
+<path id="file_save_2" d="M27.0809 41.7769V39.4902H38.8663V41.7769H27.0809ZM32.9736 36.3138L27.2669 30.6071L28.8839 28.9901L31.8302 31.9365V24.7143H34.117V31.9365L37.0633 28.9901L38.6803 30.6071L32.9736 36.3138ZM12.4946 35.4444C11.7458 35.4444 11.0874 35.1602 10.5192 34.5917C9.95073 34.0235 9.6665 33.3651 9.6665 32.6163V7.48951C9.6665 6.74075 9.95073 6.08229 10.5192 5.51413C11.0874 4.94567 11.7458 4.66144 12.4946 4.66144H26.1134L34.117 12.665V21.2099H24.1042V35.4444H12.4946ZM24.4423 14.3361H31.8302L24.4423 6.94817V14.3361Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_1" x="-29.2168" y="-17" width="341.217" height="78.2166" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+</filter>
+<clipPath id="clip0_0_1">
+<rect width="1920" height="1080" fill="white" transform="translate(-1145 -403)"/>
+</clipPath>
+</defs>
+</svg>
