@@ -20,7 +20,7 @@ const addAdmin = async (req, res) => {
     }
 }
 
-export const adminController = {
+export {
     getAdminList,
     addAdmin,
 }
