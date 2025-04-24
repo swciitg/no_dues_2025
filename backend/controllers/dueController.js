@@ -19,8 +19,20 @@ const getDuesBySection = async (req, res) => {
         if (!definedSections[section]) {
             return res.status(400).json({ message: 'Invalid section' });
         }
-        const students = await dueModel.find({due_section:section});
-        // const students = await studentModel.find({ dues: { $elemMatch: { due_section: section } } });
+        const dues = await dueModel.find({due_section:section});
+        const students = await studentModel.find({} , {dues:0});
+
+        students.forEach((student)=>{
+            const matchedDues = dues.filter((due) => due.student.name === student.name);
+            if (matchedDues.length > 0) {
+                student.dues = matchedDues.map((due) => ({
+                  due_section: due.due_section,
+                  due_subsection: due.due_subsection,
+                }));
+            }
+        })
+        // O(sd)
+
         res.status(200).json(students);
     } catch (error) {
         res.status(500).json({ message: 'Error fetching dues' });
@@ -33,8 +45,20 @@ const getDuesBySubsection = async (req, res) => {
         if (!definedSections[section]) {
             return res.status(400).json({ message: 'Invalid section' });
         }
-        const students = await dueModel.find({due_section:section, due_subsection:subsection});
-        // const students = await studentModel.find({ dues: { $elemMatch: { due_section: section, due_subsection: subsection } } });
+        const dues = await dueModel.find({due_section:section, due_subsection:subsection});
+        const students = await studentModel.find({} , {dues:0});
+
+        students.forEach((student)=>{
+            const matchedDues = dues.filter((due) => due.student.name === student.name);
+            if (matchedDues.length > 0) {
+                student.dues = matchedDues.map((due) => ({
+                  due_section: due.due_section,
+                  due_subsection: due.due_subsection,
+                }));
+            }
+        })
+        // O(sd)
+
         res.status(200).json(students);
     } catch (error) {
         res.status(500).json({ message: 'Error fetching dues' });

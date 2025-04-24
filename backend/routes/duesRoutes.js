@@ -3,8 +3,9 @@ import { addDue, deleteDue, getAllDues, getDuesBySection, getDuesBySubsection } 
 
 const router = express.Router();
 
-router.get('/dues', getAllDues);
+router.get('/', getAllDues);
 router.get('/:section', getDuesBySection);
 router.get('/:section/:subsection', getDuesBySubsection);
-router.post('/:section/:subsection', addDue);
-router.delete('/:section/:subsection', deleteDue);
+router.post('/', addDue);
+router.delete('/', deleteDue);
+// router.post('/:section/:subsection/csv' , uploadCSV);
