@@ -11,12 +11,8 @@ const duesSchema = new mongoose.Schema({
     due_subsection: {
         type: String,
     },
-    due: {
-        type:Boolean,
-        required:true
-    },
     student: {
-        rollno: {
+        rollNo: {
             type: String,
             required: true,
         },

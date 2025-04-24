@@ -18,7 +18,7 @@ const SearchBar = (props) => {
       border: "1px solid #d1d5db",
       borderRadius: "20px",
       padding: "4px 12px",
-      width: "85%",
+      width: "90%",
       backgroundColor: "#fff",
       boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)",
     }}>

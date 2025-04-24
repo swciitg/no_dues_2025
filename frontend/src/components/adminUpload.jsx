@@ -2,7 +2,7 @@ import { useState } from "react";
 
  const AdminCSVUploader=()=> {
   const [file, setFile] = useState(null);
-  const [uploading, setUploading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -10,17 +10,21 @@ import { useState } from "react";
 
   const handleUpload = async () => {
     if (!file) return;
-    setUploading(true);
+    setLoading(true);
 
     const formData = new FormData();
     formData.append("file", file);
 
     try {
-      // upload here
+      const res = await axios.post(`${BASE_URL}/dues/uploadCSV`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      console.log("Upload success:", res.data);
+
     } catch (err) {
       console.error(err);
     } finally {
-      setUploading(false);
+      setLoading(false);
     }
   };
 
@@ -66,10 +70,10 @@ import { useState } from "react";
       {file ? (
         <button
           onClick={handleUpload}
-          disabled={uploading}
-          style={{ ...buttonStyle, ...(uploading ? {} : hoverStyle) }}
+          disabled={loading}
+          style={{ ...buttonStyle, ...(loading ? {} : hoverStyle) }}
         >
-           {uploading ? "Uploading..." : "Upload"}
+           {loading ? "Uploading..." : "Upload"}
         </button>
       ) : (
         <label style={{ cursor: "pointer" }}>

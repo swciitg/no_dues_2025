@@ -18,10 +18,20 @@ export const btnCSS = {
 
 const StudentCard=(props) =>{
 
-    const {student}  = props;
+    const {student,path,duesOnly}  = props;
 
     const [confirm, setConfirm] = useState(false);
     const [dialogBoxData , setDialogBoxData] = useState({});
+
+    function checkForDue(list,req) {
+        let flag=false;
+        list.forEach(item => {
+            if(item.due_subsection === req){ 
+                flag=true;
+            }
+        });
+        return flag;
+    }
 
     const imgCSS = {
         width:'16px'
@@ -34,21 +44,31 @@ const StudentCard=(props) =>{
                     <ConfirmBox msg={dialogBoxData.msg} callback={dialogBoxData.callback} close={setConfirm} />
                 )
             }
+            {
+            (!duesOnly || checkForDue(student.dues,path[path.length-1])===duesOnly )
+            &&   
             <div className="admin-student-card" 
             style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                <div>{student.roll}</div>
-                <div>{student.name}</div>
-                <div style={{color:student.dues?'red':'gray'}}>{student.dues?'Dues':'No Dues'}</div>
+                <div>{student.rollNo}</div>
+                <div style={{width:'25%',textWrap:'wrap'}}>{student.name}</div>
+                <div style={{color:student.dues?'red':'gray'}}>{checkForDue(student.dues,path[path.length-1])?'Dues':'No Dues'}</div>
                 <div style={{display:'flex',alignItems:'center',justifyContent:'center',cursor:'pointer',gap:'10px'}}>
                     {
-                        student.dues? 
+                        checkForDue(student.dues,path[path.length-1])? 
                         (<>
                         <button style={{...btnCSS,backgroundColor:'#2164E8'}} onClick={()=>{
-                            console.log('click')
                             setConfirm(true);
                             setDialogBoxData({
                                 msg:'Confirm that Dues are Cleared?',
-                                callback:null // this callback will call the api function
+                                callback:{
+                                    url:``,
+                                    payload:{
+                                        rollNo:student.rollNo,
+                                        due_section:path[path.length-2],
+                                        due_subsection:path[path.length-1]
+                                    }, 
+                                    action:'CLEAR'
+                                }// this callback will call the api function
                             })
                         }}>
                             <img src={check} alt='' style={{...imgCSS}}/>
@@ -59,16 +79,26 @@ const StudentCard=(props) =>{
                         <button style={{...btnCSS,backgroundColor:'#2164E8'}} onClick={()=>{
                             setConfirm(true);
                             setDialogBoxData({
-                                msg:'Add New Dues?',
-                                callback:null // this callback will call the api function
+                                msg:'Add New Due?',
+                                callback:{
+                                    url:``,
+                                    payload:{
+                                        rollNo:student.rollNo,
+                                        name:student.name,
+                                        email:student.email,
+                                        due_section:path[path.length-2],
+                                        due_subsection:path[path.length-1]
+                                    }, 
+                                    action:'ADD'}
+                                // this callback will call the api function
                             })
                         }}>
                             <img src={add} alt='' style={{...imgCSS}}/>
-                            <span style={{color:'#fff'}}>Add Dues</span>
+                            <span style={{color:'#fff'}}>Add Due</span>
                         </button>
                         </>)
                     }
-                    <button style={{...btnCSS,backgroundColor:'red'}} onClick={()=>{
+                    <button style={{...btnCSS,backgroundColor:'red',width:'40px'}} onClick={()=>{
                         setConfirm(true);
                         setDialogBoxData({
                             msg:'Remove the Student from the list?',
@@ -76,11 +106,12 @@ const StudentCard=(props) =>{
                         })
                     }}>
                         <img src={trash} alt='' style={{...imgCSS}}/>
-                        <span style={{color:'#fff'}}>Remove</span>
+                        {/* <span style={{color:'#fff'}}>Remove</span> */}
                     </button>
                 </div>
             
             </div>
+            }
         </>
     )
 }

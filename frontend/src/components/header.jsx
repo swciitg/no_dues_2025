@@ -11,7 +11,8 @@ const HeaderTab = (props)=> {
                 {
                     path.map((lvl, index) => {
                         return(
-                            <div style={{color:index!=path.length-1?'#7B7B7B':'#2A3F54',fontWeight:'500',cursor:'pointer'}}
+                            <div key={index} 
+                            style={{color:index!=path.length-1?'#7B7B7B':'#2A3F54',fontWeight:'500',cursor:'pointer'}}
                             onClick={()=>{
                                 if(index!=path.length-1) backTrack(index);
                             }}>

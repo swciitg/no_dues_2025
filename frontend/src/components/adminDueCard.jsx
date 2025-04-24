@@ -2,7 +2,7 @@ import React from "react";
 
 const DueCard = (props) => {
 
-  const {title, approvedCnt, total, pendingCnt ,color} = props; 
+  const {title, pending ,color} = props; 
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 20px",
@@ -11,13 +11,13 @@ const DueCard = (props) => {
 
       <div style={{display: "flex",flexDirection: "column",alignItems:'flex-start'}}>
         <div style={{fontSize: "1.4rem", fontWeight: "600", color: "#1E2532", marginBottom: "4px",}}>{title}</div>
-        <div style={{ fontSize: "1rem",color: "#787878"}}>{approvedCnt} approved</div>
+        {/* <div style={{ fontSize: "1rem",color: "#787878"}}>{approvedCnt} approved</div> */}
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end",marginRight:'10px'}}>
         {/* <div style={{ fontSize: "1rem", color: "#787878", }}>Total</div>
         <div style={{ fontSize: "1.1rem", fontWeight: "600", color: "#439F15",  marginBottom: "4px" }}>₹ {total}</div> */}
-        <div style={{  fontSize: "1rem",  color: "#787878" }}>{pendingCnt} dues pending</div>
+        <div style={{  fontSize: "1rem",  color: "#787878" }}>{pending} dues pending</div>
       </div>
 
       <div style={{ position: "absolute", top: "0", right: "0",  width: "15px", height: "100%",
